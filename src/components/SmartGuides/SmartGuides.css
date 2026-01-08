@@ -1,0 +1,87 @@
+.smart-guides-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  pointer-events: none;
+  z-index: 1000;
+  overflow: visible;
+}
+
+:root {
+  --snap-color: #2563eb;
+  --snap-color-element: #8b5cf6;
+  --snap-color-grid: #10b981;
+  --spacing-color: #f59e0b;
+}
+
+.snap-line {
+  stroke-width: 1;
+  stroke-dasharray: 4 2;
+}
+
+.snap-line--element {
+  stroke: var(--snap-color-element);
+}
+
+.snap-line--grid {
+  stroke: var(--snap-color-grid);
+}
+
+.snap-line--section {
+  stroke: var(--snap-color);
+}
+
+.snap-label {
+  font-size: 10px;
+  font-family: system-ui, sans-serif;
+  fill: var(--snap-color);
+  font-weight: 500;
+}
+
+.spacing-indicator {
+  opacity: 0.9;
+}
+
+.spacing-line {
+  stroke: var(--spacing-color);
+  stroke-width: 1;
+}
+
+.spacing-cap {
+  stroke: var(--spacing-color);
+  stroke-width: 1;
+}
+
+.spacing-badge-bg {
+  fill: var(--spacing-color);
+}
+
+.spacing-badge-text {
+  fill: white;
+  font-size: 10px;
+  font-family: system-ui, sans-serif;
+  font-weight: 600;
+  text-anchor: middle;
+}
+
+.alignment-badge {
+  opacity: 1;
+  transition: opacity 0.2s ease-out;
+}
+
+@keyframes fadeInOut {
+  0% {
+    opacity: 0;
+    transform: translateY(5px);
+  }
+  20% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  80% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}

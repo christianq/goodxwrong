@@ -1,0 +1,161 @@
+.toolbar {
+  height: 48px;
+  background: #0f172a;
+  border-bottom: 1px solid #1e293b;
+  display: flex;
+  align-items: center;
+  padding: 0 12px;
+  gap: 8px;
+}
+
+.toolbar-section {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbar-section--elements {
+  flex: 1;
+}
+
+.toolbar-section--actions {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.toolbar-logo {
+  font-size: 14px;
+  font-weight: 700;
+  color: #ffffff;
+  margin-right: 16px;
+}
+
+.toolbar-label {
+  font-size: 11px;
+  font-weight: 500;
+  color: #64748b;
+  margin-right: 4px;
+}
+
+.toolbar-button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 10px;
+  background: transparent;
+  border: 1px solid transparent;
+  border-radius: 6px;
+  color: #94a3b8;
+  font-size: 12px;
+  font-weight: 500;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  font-family: inherit;
+}
+
+.toolbar-button:hover:not(:disabled) {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.toolbar-button:focus {
+  outline: 2px solid #2563eb;
+  outline-offset: -2px;
+}
+
+.toolbar-button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.toolbar-button--icon {
+  padding: 6px;
+}
+
+.toolbar-button--icon span {
+  display: none;
+}
+
+.toolbar-button--toggle {
+  border-color: #334155;
+}
+
+.toolbar-button--active {
+  background: rgba(37, 99, 235, 0.2);
+  border-color: #2563eb;
+  color: #60a5fa;
+}
+
+.toolbar-divider {
+  width: 1px;
+  height: 24px;
+  background: #334155;
+  margin: 0 4px;
+}
+
+.toolbar-breakpoint {
+  display: flex;
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.toolbar-breakpoint-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  color: #64748b;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.toolbar-breakpoint-btn:hover {
+  color: #94a3b8;
+}
+
+.toolbar-breakpoint-btn--active {
+  background: #2563eb;
+  color: white;
+}
+
+.toolbar-zoom {
+  display: flex;
+  align-items: center;
+  background: #1e293b;
+  border-radius: 6px;
+  overflow: hidden;
+}
+
+.toolbar-zoom-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  color: #94a3b8;
+  font-size: 14px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.toolbar-zoom-btn:hover {
+  background: rgba(255, 255, 255, 0.05);
+  color: #e2e8f0;
+}
+
+.toolbar-zoom-value {
+  min-width: 48px;
+  text-align: center;
+  font-size: 11px;
+  font-weight: 500;
+  color: #94a3b8;
+  font-family: 'SF Mono', Monaco, monospace;
+}

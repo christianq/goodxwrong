@@ -1,0 +1,140 @@
+.element-wrapper {
+  position: absolute;
+  box-sizing: border-box;
+  user-select: none;
+  touch-action: none;
+}
+
+.element-wrapper:not(.element-wrapper--dragging):not(.element-wrapper--resizing) {
+  transition: box-shadow 0.15s ease;
+}
+
+.element-wrapper:focus {
+  outline: none;
+}
+
+.element-wrapper:focus-visible {
+  outline: 2px solid #2563eb;
+  outline-offset: 2px;
+}
+
+.element-wrapper--selected {
+  outline: 2px solid #2563eb;
+  outline-offset: 0;
+}
+
+.element-wrapper--dragging {
+  z-index: 9999 !important;
+  cursor: grabbing !important;
+  will-change: transform;
+}
+
+.element-wrapper--resizing {
+  cursor: inherit;
+}
+
+.element-wrapper--collision {
+  outline-color: #ef4444;
+  box-shadow: 0 0 0 2px rgba(239, 68, 68, 0.3);
+}
+
+.element-content {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+/* Resize handles */
+.resize-handle {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: white;
+  border: 1px solid #2563eb;
+  border-radius: 2px;
+  z-index: 10;
+  pointer-events: auto;
+}
+
+.resize-handle:hover {
+  background: #2563eb;
+}
+
+/* Text element */
+.element-text {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: flex-start;
+  word-wrap: break-word;
+  overflow-wrap: break-word;
+  overflow: hidden;
+  padding: 4px;
+  box-sizing: border-box;
+}
+
+/* Image element */
+.element-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+}
+
+.element-image-placeholder {
+  width: 100%;
+  height: 100%;
+  background: #f1f5f9;
+  border: 2px dashed #cbd5e1;
+  border-radius: 4px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  color: #94a3b8;
+}
+
+.element-image-placeholder svg {
+  opacity: 0.5;
+}
+
+.element-image-placeholder span {
+  font-size: 12px;
+  font-weight: 500;
+}
+
+/* Button element */
+.element-button {
+  width: 100%;
+  height: 100%;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+  font-weight: 500;
+  font-family: inherit;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: filter 0.15s ease;
+}
+
+.element-button:hover {
+  filter: brightness(1.1);
+}
+
+/* Block element */
+.element-block {
+  width: 100%;
+  height: 100%;
+}
+
+/* Ghost preview during drag */
+.element-ghost {
+  position: absolute;
+  pointer-events: none;
+  opacity: 0.3;
+  outline: 2px dashed #2563eb;
+  background: rgba(37, 99, 235, 0.05);
+}
